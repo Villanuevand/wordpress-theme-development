@@ -7,6 +7,8 @@
 				<?php the_title();?>
 			</h1>
 			<small><?php the_time('l F d, Y');?></small>
+			<br>
+			<?php the_post_thumbnail('medium');?>
 			<p><?php the_content();?></p>			
 		</article>
 	</div><!--End post-->
