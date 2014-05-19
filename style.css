@@ -1,6 +1,6 @@
 /*
 Theme Name: Villanuevand
-Theme URI: http://www.willanuevand.com
+Theme URI: http://www.villanuevand.com
 Author: Andrés Villanueva
 Author URI: http://wordpress.org/
 Description: Tema desarrollado para conocer la creación de temas en Wordpress.
@@ -8,5 +8,8 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Usalo para crear cosas geniales, diviertete y comparte con otros lo que hayas aprendido.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+@import url('css/bootstrap.min.css');

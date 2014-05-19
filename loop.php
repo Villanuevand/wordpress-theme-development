@@ -4,7 +4,7 @@
 		<article>
 			<img src="<?php the_post_thumbnail();?>">
 			<h1>
-				<a href="<?php the_permalink();?>"><?php the_title();?></a>
+				ola<a href="<?php the_permalink();?>"><?php the_title();?></a>
 			</h1>
 			<small><?php the_time('l F d, Y');?></small>
 			<p><?php the_content();?></p>			

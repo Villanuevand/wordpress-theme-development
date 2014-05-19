@@ -2,6 +2,7 @@
 // *** Constantes
 define(TEMPPATH, get_bloginfo('stylesheet_directory'));
 define(IMAGES, TEMPPATH."/images");
+define(JS, TEMPPATH."/js");
 // *** Soportando Menus
 add_theme_support('nav_menus');
 // *** Soportando Imagen Destacada	
