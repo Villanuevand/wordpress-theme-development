@@ -3,15 +3,20 @@
 define(TEMPPATH, get_bloginfo('stylesheet_directory'));
 define(IMAGES, TEMPPATH."/images");
 define(JS, TEMPPATH."/js");
-// *** Soportando Menus
-add_theme_support('nav_menus');
 // *** Soportando Imagen Destacada	
 add_theme_support('post-thumbnails');
-if (function_exists('register_nav_menu;')) {
-	register_nav_menu(
-		array('main'=> 'Main Nav')
-	);
+// *** Soportando Menus
+function eq_register_menus() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Header Menu' )
+      ,'extra-menu' => __( 'Extra Menu' )
+      ,'footer-menu' => __('Footer Menu')
+    )
+  );
 }
+add_action( 'init', 'eq_register_menus' );
+
 
 /**
 * Registers a new post type SERVICIOS
