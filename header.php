@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory');?>/css/reset.css">
 	-->
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url');?>">	
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<!--<?php wp_head();?>-->
 	<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -17,37 +18,38 @@
     <![endif]-->
 </head>
 <body>
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      	<a class="navbar-brand" href="<?php echo home_url(); ?>">
+	            <?php bloginfo('name'); ?>
+	    	</a>
+	    </div>
+		<div class="navbar-right">
+			  <?php
+	            wp_nav_menu( array(
+	                'menu'              => 'header-menu',
+	                'theme_location'    => 'header-menu',
+	                'depth'             => 2,
+	                'container'         => 'div',
+	                'container_class'   => 'collapse navbar-collapse',
+	        		'container_id'      => 'bs-example-navbar-collapse-1',
+	                'menu_class'        => 'nav navbar-nav',
+	                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+	                'walker'            => new wp_bootstrap_navwalker())
+	            );
+	        ?>
+		</div>	      
+	  </div>
+	</nav>	
+	<header class="">
+
+	</header><!--End header-->
 	<div class="container">
-		<header class="">
-			<h1>
-				<a href="<?php bloginfo('url');?>" title="<?php bloginfo('name');?>">
-					<img src="<?php print IMAGES;?>/logo.png" alt="<?php bloginfo('name');?>" width="150">
-				</a>
-			</h1>
-			<h2><?php bloginfo('name');?></h2>
-			<h3><?php bloginfo('description');?></h3>
-			<?php    /**
-				* Displays a navigation menu
-				* @param array $args Arguments
-				*/
-				$args = array(
-					'theme_location' => '',
-					'menu' => '',
-					'container' => 'div',
-					'container_class' => 'menu-{menu-slug}-container',
-					'container_id' => '',
-					'menu_class' => 'menu',
-					'menu_id' => '',
-					'echo' => true,
-					'fallback_cb' => 'wp_page_menu',
-					'before' => '',
-					'after' => '',
-					'link_before' => '',
-					'link_after' => '',
-					'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
-					'depth' => 0,
-					'walker' => ''
-				);
-			
-				wp_nav_menu( $args );?>
-		</header><!--End header-->

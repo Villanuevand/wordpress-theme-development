@@ -1,6 +1,5 @@
 <?php get_header();?>
 <!--El bendito <LOOP--></LOOP-->
-<h2>LOOP ORIGINAL</h2>
 	<div class="row">
 		<?php if(have_posts()):while(have_posts()):the_post();?>
 		<div class="col-md-4">

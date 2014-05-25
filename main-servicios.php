@@ -3,7 +3,7 @@
 	<!--Personalizando el Loop, buscando posts tipo servicio-->
 	<?php $loop = new WP_Query( array( 'post_type' => 'servicio', 'posts_per_page' => 3 ) ); ?>
 	<?php while($loop->have_posts()) : $loop->the_post();?>
-	<div class="col-md-4">
+	<div class="col-md-4	">
 		<article>
 			<h6>
 				<a href="<?php the_permalink();?>"><?php the_title();?></a>

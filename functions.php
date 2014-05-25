@@ -73,5 +73,6 @@ function eq_register_servicio() {
 }
 
 add_action( 'init', 'eq_register_servicio' );
-
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_navwalker.php');
 ?>
